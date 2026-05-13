@@ -6,12 +6,6 @@
   <img src="public/Wanderlast.png" alt="Logo" width="200" />
 </p>
 
-[![GitHub stars](https://img.shields.io/github/stars/satyajtus14/Project-On-Wanderlast-Travel-Apps?style=for-the-badge)](https://github.com/satyajtus14/Project-On-Wanderlast-Travel-Apps/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/satyajtus14/Project-On-Wanderlast-Travel-Apps?style=for-the-badge)](https://github.com/satyajtus14/Project-On-Wanderlast-Travel-Apps/network)
-[![GitHub issues](https://img.shields.io/github/issues/satyajtus14/Project-On-Wanderlast-Travel-Apps?style=for-the-badge)](https://github.com/satyajtus14/Project-On-Wanderlast-Travel-Apps/issues)
-<!-- TODO: Add actual license badge once known -->
-[![GitHub license](https://img.shields.io/github/license/satyajtus14/Project-On-Wanderlast-Travel-Apps?style=for-the-badge)](LICENSE)
-
 **A modern travel booking application for exploring and booking destinations with ease.**
 
 [Live Demo](https://demo-link.com) <!-- TODO: Add live demo link --> |
