@@ -2,7 +2,7 @@ import DestinationCard from '@/components/DestinationCard';
 import React from 'react';
 
 const DestinationPage = async () => {
-    const res = await fetch('http://localhost:5001/destinations');
+    const res = await fetch('https://wanderlast-travelapps-backend.onrender.com/destinations');
     const destinations = await res.json();
     console.log(destinations);
     return (
