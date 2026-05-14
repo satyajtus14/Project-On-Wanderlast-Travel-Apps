@@ -8,7 +8,7 @@
 
 **A modern travel booking application for exploring and booking destinations with ease.**
 
-[Live Demo](https://demo-link.com) <!-- TODO: Add live demo link --> |
+[Live Demo](https://wanderlast-travelapps-frontend.onrender.com/) <!-- TODO: Add live demo link --> |
 [Documentation](https://docs-link.com) <!-- TODO: Add documentation link -->
 
 </div>
