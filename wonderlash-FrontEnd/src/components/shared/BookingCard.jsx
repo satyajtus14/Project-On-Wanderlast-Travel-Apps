@@ -50,7 +50,7 @@ const BookingCard = ({ destination }) => {
 
   // Step 3 — Send to backend call booking API
   try {
-    const response = await fetch('http://localhost:5001/booking', {
+    const response = await fetch('https://wanderlast-travelapps-backend.onrender.com/booking', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(bookingData),
