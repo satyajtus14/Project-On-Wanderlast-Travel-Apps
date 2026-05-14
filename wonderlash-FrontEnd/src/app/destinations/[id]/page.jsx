@@ -11,7 +11,7 @@ import { LuMapPin } from "react-icons/lu";
 const DestinationDetailsPage = async ({ params }) => {
   const { id } = await params;
 
-  const res = await fetch(`http://localhost:5001/destination/${id}`);
+  const res = await fetch(`https://wanderlast-travelapps-backend.onrender.com/destination/${id}`);
 
   const destination = await res.json();
 
