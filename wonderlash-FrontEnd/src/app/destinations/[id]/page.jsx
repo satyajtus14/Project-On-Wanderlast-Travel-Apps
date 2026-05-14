@@ -1,5 +1,6 @@
 import { DeleteDestinationByAlert } from "@/components/DeleteDestinationByAlert";
 import { EditDestinationByModal } from "@/components/EditDestinationByModal";
+import BookingCard from "@/components/shared/BookingCard";
 import { Button } from "@heroui/react";
 import Image from "next/image";
 import React from "react";
@@ -54,7 +55,7 @@ const DestinationDetailsPage = async ({ params }) => {
       </div>
 
       {/* Main Content */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-10">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-10 border-2 border-gray-300 rounded-2xl p-6">
         
         {/* Left Side */}
         <div className="lg:col-span-2">
@@ -85,37 +86,7 @@ const DestinationDetailsPage = async ({ params }) => {
 
         {/* Right Side Booking Card */}
         <div>
-          <div className="bg-white shadow-xl rounded-2xl p-6 sticky top-24">
-            
-            <h3 className="text-4xl font-bold text-blue-600">
-              ${price}
-            </h3>
-
-            <p className="text-gray-500 mt-1">
-              Per Person
-            </p>
-
-            <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl mt-6 font-semibold transition">
-              Book Now
-            </button>
-
-            <button className="w-full border border-gray-300 py-3 rounded-xl mt-3 font-semibold hover:bg-gray-100 transition">
-              Save Destination
-            </button>
-
-            <div className="border-t mt-6 pt-6 space-y-3 text-gray-600">
-              <div className="flex justify-between">
-                <span>Country</span>
-                <span>{country}</span>
-              </div>
-
-              <div className="flex justify-between">
-                <span>Duration</span>
-                <span>{duration}</span>
-              </div>
-            </div>
-
-          </div>
+          <BookingCard destination={destination} />
         </div>
       </div>
     </div>

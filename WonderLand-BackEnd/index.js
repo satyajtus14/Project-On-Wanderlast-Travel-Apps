@@ -26,6 +26,7 @@ async function run() {
 
     const db = client.db("wonderlast-DB");
     const destinationCollection = db.collection("destinations");
+    const bookingCollection = db.collection("bookings");
 
 
     // API for all destinations
@@ -115,6 +116,45 @@ async function run() {
       }
     });
 
+   // API for booking destinations
+   app.post('/booking', async (req, res) => {
+    try {
+      const bookingData = req.body; 
+      console.log(bookingData);
+      
+      const result = await bookingCollection.insertOne(bookingData);
+      res.json(result);
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  // API for get all bookings
+  app.get('/bookings/:userId', async (req, res) => {
+      const {userId} = req.params // Get userId from URL parameters
+    try {
+      const results = await bookingCollection.find({userId:userId}).toArray();
+      res.json(results);
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+    
+  // API for delete booking
+  app.delete('/booking/:bookingId', async (req, res) => {
+    try {
+      const { bookingId } = req.params;
+      const result = await bookingCollection.deleteOne({ _id: new ObjectId(bookingId) });
+      if (result.deletedCount === 0) {
+        return res.status(404).json({ error: "Booking not found" });
+      }
+      res.json(result);
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  });
+
+  // Confirm MongoDB connection
     await client.db("admin").command({ ping: 1 });
     console.log("Connected to MongoDB!");
 
