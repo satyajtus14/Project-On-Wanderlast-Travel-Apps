@@ -7,7 +7,7 @@ export function CancelBookingItem({ bookingId }) {
     const handleCancelBooking = async () => {
       
       try {
-        const response = await fetch(`http://localhost:5001/booking/${bookingId}`, {
+        const response = await fetch(`https://wanderlast-travelapps-backend.onrender.com/booking/${bookingId}`, {
           method: 'DELETE',
         });
   
