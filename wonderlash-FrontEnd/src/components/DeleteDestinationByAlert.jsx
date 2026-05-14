@@ -10,7 +10,7 @@ export function DeleteDestinationByAlert({destination}) {
     
      const onDelete = async () => {
         // Call your API to delete the destination from the database here
-        const response = await fetch(`http://localhost:5001/destination/${_id}`, {
+        const response = await fetch(`https://wanderlast-travelapps-backend.onrender.com/destination/${_id}`, {
           method: 'DELETE',
         }); 
         const result = await response.json();
