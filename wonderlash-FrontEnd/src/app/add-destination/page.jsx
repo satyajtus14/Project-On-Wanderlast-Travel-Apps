@@ -16,7 +16,7 @@ const AddDestinationPage = () => {
         console.log(destinationName);
         
         //Call your API to save the data to the database here
-        const response = await fetch('http://localhost:5001/destination', {
+        const response = await fetch('https://wanderlast-travelapps-backend.onrender.com/destination', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
