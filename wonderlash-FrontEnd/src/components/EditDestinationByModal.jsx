@@ -30,7 +30,7 @@ export function EditDestinationByModal({ destination }) {
     console.log(destinationNameCollect);
 
     //Call your API to edit the data in the database here
-    const response = await fetch(`http://localhost:5001/destination/${_id}`, {
+    const response = await fetch(`https://wanderlast-travelapps-backend.onrender.com/destination/${_id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
