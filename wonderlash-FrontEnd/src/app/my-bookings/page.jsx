@@ -17,7 +17,7 @@ const MyBookingsPage = async() => {
   const user = session?.user;
     console.log(user);
 
-     const res = await fetch(`http://localhost:5001/bookings/${user?.id}`);
+     const res = await fetch(`https://wanderlast-travelapps-backend.onrender.com/bookings/${user?.id}`);
      const bookings = await res.json();
 
       console.log(bookings);    
